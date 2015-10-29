@@ -1,9 +1,37 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Task.io</title>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$("#video-wrapper").resizable({
+				alsoResize : "#video"
+			});
+		});
+	</script>
+	<style type="text/css">
+		.ui-resizable-helper {
+		    border: 1px dotted gray;
+		}
+		#video-wrapper {
+		    display: block;
+		    width: 900px;
+		    height: 500px;
+		    overflow: hidden;
+		    position: relative;
+		}
+		#video {
+		    width: 100%;
+		    height: 100%;
+		}
+	</style>
 </head>
 <body>
-	<iframe width="560" height="315" src="http://www.youtube.com/embed/vx8YOPG6bJU" frameborder="0" allowfullscreen></iframe>
+	<div id="video-wrapper">
+		<iframe id="video" src="https://appear.in/HFID-Conference" frameborder="0"></iframe>
+	</div>
 </body>
 </html>
